@@ -1,9 +1,10 @@
 from ex0.CreatureCard import CreatureCard
+from ex0.Card import Rarity
 
 print("=== DataDeck Card Foundation ===\n")
 print("Testing Abstract Base Class Design:\n")
 
-card = CreatureCard("Fire Dragon", 5, "Legendary", 7, 5)
+card = CreatureCard("Fire Dragon", 5, Rarity.LEGENDARY.value, 7, 5)
 print("CreatureCard Info:")
 print(card.get_card_info())
 

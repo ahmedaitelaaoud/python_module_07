@@ -10,7 +10,7 @@ class CreatureCard(Card):
             self.attack = attack
             self.health = health
         else:
-            raise ValueError(f"{attack} and {health} must be positive integers")
+            raise ValueError("attack and health must be positive integers")
 
         self.creature = "Creature"
 

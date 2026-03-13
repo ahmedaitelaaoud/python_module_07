@@ -1,4 +1,11 @@
 from abc import ABC, abstractmethod
+from enum import Enum
+
+class Rarity(Enum):
+    ARTIFACT = 'Artifact'
+    LEGENDARY = 'Legendary'
+    RARE = 'Rare'
+    COMMON = 'Common'
 
 class Card(ABC):
 
