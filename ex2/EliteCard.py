@@ -14,7 +14,6 @@ class EliteCard(Card, Combatable, Magical):
         else:
             raise ValueError("attack and health must be positive integers")
 
-        self.mana = 0
 
     def play(self, game_state: dict) -> dict:
         return {
@@ -56,13 +55,13 @@ class EliteCard(Card, Combatable, Magical):
         }
 
     def channel_mana(self, amount: int) -> dict:
-        self.mana += amount
+        self.cost += amount
         return {
             'channeled': amount,
-            'total_mana': self.mana
+            'total_mana': self.cost
         }
 
     def get_magic_stats(self) -> dict:
         return {
-            'mana': self.mana
+            'mana': self.cost
         }
