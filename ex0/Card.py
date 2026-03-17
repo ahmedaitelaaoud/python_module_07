@@ -6,6 +6,7 @@ class Rarity(Enum):
     LEGENDARY = 'Legendary'
     RARE = 'Rare'
     COMMON = 'Common'
+    EPIC = 'Epic'
 
 class Card(ABC):
 
