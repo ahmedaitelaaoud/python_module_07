@@ -58,9 +58,7 @@ class TournamentPlatform:
             total_rating += card.rating
 
         if total_cards > 0:
-            avg_rating = int(
-                total_rating / total_cards
-            )
+            avg_rating = int(total_rating / total_cards)
         else:
             avg_rating = 0
 

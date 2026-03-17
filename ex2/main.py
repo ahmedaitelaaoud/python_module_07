@@ -8,7 +8,7 @@ print("""- Card: ['play', 'get_card_info', 'is_playable']
 - Magical: ['cast_spell', 'channel_mana', 'get_magic_stats']\n""")
 
 
-card = EliteCard('Arcane Warrior', 4, Rarity.LEGENDARY.value, 5, 5)
+card = EliteCard("Arcane Warrior", 4, Rarity.LEGENDARY.value, 5, 5)
 print("Playing Arcane Warrior (Elite Card):\n")
 
 print("Combat phase:")

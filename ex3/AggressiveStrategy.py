@@ -29,18 +29,16 @@ class AggressiveStrategy(GameStrategy):
                 cards_played.append(card.name)
                 available_mana -= card.cost
                 mana_used += card.cost
-                damage_dealt += getattr(card, 'attack', 0)
-                damage_dealt += getattr(card, 'damage', 0)
+                damage_dealt += getattr(card, "attack", 0)
+                damage_dealt += getattr(card, "damage", 0)
 
-        targets = self.prioritize_targets(
-            battlefield + ["Enemy Player"]
-        )
+        targets = self.prioritize_targets(battlefield + ["Enemy Player"])
         targets_attacked = targets[:1] if targets else ["Enemy Player"]
         damage_dealt += 3 * len(cards_played)
 
         return {
-            'cards_played': cards_played,
-            'mana_used': mana_used,
-            'targets_attacked': targets_attacked,
-            'damage_dealt': damage_dealt
+            "cards_played": cards_played,
+            "mana_used": mana_used,
+            "targets_attacked": targets_attacked,
+            "damage_dealt": damage_dealt,
         }

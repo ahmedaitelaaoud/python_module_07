@@ -11,7 +11,8 @@ print(card.get_card_info())
 available_mana = 6
 print(f"\nPlaying Fire Dragon with {available_mana} mana available:")
 print(f"Playable: {card.is_playable(available_mana)}")
-print(f"Play result: {card.play({'effect': 'Creature summoned to battlefield'})}")
+play_result = card.play({"effect": "Creature summoned to battlefield"})
+print(f"Play result: {play_result}")
 
 print("\nFire Dragon attacks Goblin Warrior:")
 print(f"Attack result: {card.attack_target('Goblin Warrior')}")

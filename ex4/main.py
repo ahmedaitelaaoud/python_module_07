@@ -2,17 +2,26 @@ from ex4.TournamentCard import TournamentCard
 from ex4.TournamentPlatform import TournamentPlatform
 from ex0.Card import Rarity
 
-
 platform = TournamentPlatform()
 
 print("\n== DataDeck Tournament Platform ===\n")
 print("Registering Tournament Cards...")
 
 dragon = TournamentCard(
-    "Fire Dragon", cost=5, rarity=Rarity.EPIC.value, attack=80, health=500, starting_rating=1200
+    "Fire Dragon",
+    cost=5,
+    rarity=Rarity.EPIC.value,
+    attack=80,
+    health=500,
+    starting_rating=1200,
 )
 wizard = TournamentCard(
-    "Ice Wizard", cost=4, rarity=Rarity.RARE.value, attack=60, health=400, starting_rating=1150
+    "Ice Wizard",
+    cost=4,
+    rarity=Rarity.RARE.value,
+    attack=60,
+    health=400,
+    starting_rating=1150,
 )
 
 platform.register_card(dragon)
@@ -38,11 +47,15 @@ leaderboard = platform.get_leaderboard()
 
 
 for i, stats in enumerate(leaderboard, 1):
-    print(f"{i}. {stats['name']} - Rating: {stats['rating']} ({stats['record']})")
+    print(
+        f"{i}. {stats['name']} - Rating: {stats['rating']} ({stats['record']})"
+    )
 
 print("\nPlatform Report:")
 report = platform.generate_tournament_report()
 print(report)
 
 print("\n=== Tournament Platform Successfully Deployed! ===")
-print("All abstract patterns working together harmoniously!")
+print(
+    "All abstract patterns working together harmoniously!"
+)

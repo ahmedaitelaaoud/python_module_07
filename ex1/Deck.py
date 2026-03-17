@@ -4,6 +4,7 @@ from ex1.SpellCard import SpellCard
 from ex1.ArtifactCard import ArtifactCard
 import random
 
+
 class Deck:
     def __init__(self) -> None:
         self.deck: list[Card] = []
@@ -45,11 +46,10 @@ class Deck:
         if total_cards > 0:
             avg_cost = total_cost / total_cards
 
-
         return {
-        'total_cards': total_cards,
-        'creatures': creatures,
-        'spells': spells,
-        'artifacts': artifacts,
-        'avg_cost': avg_cost
-    }
+            "total_cards": total_cards,
+            "creatures": creatures,
+            "spells": spells,
+            "artifacts": artifacts,
+            "avg_cost": avg_cost,
+        }
